@@ -1,0 +1,15 @@
+/* css theo cách External */
+p {
+    color: darkblue;
+}
+
+/* selectors id */
+#first-heading {
+    color: darkblue;
+}
+
+/* selectors class */
+.second-heading {
+    color: red;
+}
+

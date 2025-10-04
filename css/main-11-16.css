@@ -1,0 +1,50 @@
+/* create biến */
+:root {
+    --text-color: red;
+}
+/* --------Units-------- */
+/* % phụ thuộc %thẻ chứa nó */
+/* rem phụ thuộc vào thẻ html */
+/* em phụ thuộc vào tag cha gần nhất chứa nó */
+/* vw , vh phụ thuộc vào % chiều ngang, dọc của trình duyệt */
+
+html {
+    font-size: 20px;
+}
+
+h1 {
+    color: var(--text-color);
+}
+
+h2 {
+    font-size: 1rem;
+}
+
+.box {
+    height: 100px;
+    width: 100px;
+    /* background-color: blue; */
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;                    /*day khoi qua trai*/
+}
+
+.box1 {
+    background-color: #333;
+}
+
+.box2 {
+    background-color: orange;
+    margin: 20px;
+}
+
+.box3 {
+    background-color: #5f0f0f;
+    padding: 10px;
+    /* border-width: 10px;
+    border-style: solid; 
+    border-color: aqua; */
+    border: 10px solid aqua;
+}

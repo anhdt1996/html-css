@@ -1,0 +1,43 @@
+html, body {
+    margin: 0;
+}
+/* atribute top left right bottom chỉ sử dụng được khi có position */
+/* position relative phụ thuộc vị trí chính nó */
+h1 {
+    /* position: relative; */
+    /* position: absolute; */
+    /* top: 10px;
+    left: 5px; */
+    margin: 0px;
+    padding: 0 16px;
+    position: sticky;
+    position: -webkit-sticky;       /* có thể sử dụng trên safari */
+    top: 0;
+}
+
+/* position absolute phụ thuộc thẻ cha gần nhất có thuộc tính position */
+.box {
+    width: 100%;
+    height: 120px;
+    background-color: #545050;
+    position: relative;
+}
+
+.box-child {
+    width: 100px;
+    height: 50px;
+    background-color: aquamarine;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/* position fixed vị trí phụ thuộc vào trình duyệt */
+.header {
+    width: 100%;
+    height: 50px;
+    background-color: blueviolet;
+    /* position: fixed; */
+}
+
+/* position sticky thường làm menu bám dính*/

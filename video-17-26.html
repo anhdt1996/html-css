@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>from 17 to 26</title>
+    <style>
+        html,body {
+            margin: 0;
+        }
+        .box1 {
+            width: 100px;
+            height: 100px;
+            color: red;
+            background-color: darkblue;
+            padding: 20px;
+            border: 5px solid black;
+            box-sizing: border-box;
+        }
+
+        .header {
+            width: 100%;
+            height: 100px;
+            background-color: darkgrey;
+            box-sizing: border-box;
+            padding: 20px;
+            border: 10px dashed #fff;
+            /* set background bắt đầu từ vị trí nào */
+            background-clip: padding-box;
+        }
+
+        .backgroundImg {
+            width: 100%;
+            height: 100vh;
+            /* background-image: 
+            linear-gradient(180deg, rgba(255,255,0,0.2), rgba(107, 149, 98, 0.2)),
+            url(img/image.png);
+            background-size: 500px;
+            background-repeat: no-repeat;   chế độ lăm lại hình */
+            
+            /* cú pháp shorthand */
+            background: url(img/image.png) no-repeat center / contain;
+        }
+
+        .box {
+            width: 100%;
+            height: 120px;
+            background: rgb(53, 58, 200);
+        }
+    </style>
+
+    <link rel="stylesheet" href="css/video-25.css">
+</head>
+<body>
+    <div class="header"></div>
+
+    <div class="box"></div>
+    <div class="box1">
+        Content in box
+    </div>
+
+    <div>
+        <h1>CSS pseudo-classes <br> pseudo-elements</h1>
+        <ul>
+            <li>:root</li>
+            <li>:hover</li>
+            <li>:active</li>
+            <li>:first-child</li>
+            <li>:last-child</li>
+        </ul>
+    </div>
+
+    <div class="backgroundImg"></div>
+</body>
+</html>

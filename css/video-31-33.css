@@ -77,6 +77,13 @@ html, body {
 }
 
 /*======================== css form box-layout ========================*/
+.box-layout {
+    max-width: 100%;
+    height: 600px;
+    background-color: #fff;
+    padding-top: 15px;
+}
+
 .box-item {
     width: 130px;
     height: 90px;
@@ -96,6 +103,31 @@ html, body {
     max-width: 100%;
     height: 400px;
     background-color: rgb(116, 224, 181);
-    margin: 20px 30px;
+    margin: 40px 50px;
 }
 
+/*======================= css form chart layout =======================*/
+.chart-layout {
+    max-width: 100%;
+    height: 300px;
+    background-color: #fff;
+    padding-top: 20px;
+}
+
+.chart-item {
+    height: var(--percent);
+    text-align: center;
+    width: 60px;
+    color: #fff;
+    background-color: #EF5122;
+}
+
+/*======================= css form last content =======================*/
+.last-content {
+    background-color: #fff;
+    margin: 40px 5px;
+}
+
+.last-content-item {
+    padding: 10px;
+}

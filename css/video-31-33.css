@@ -1,4 +1,6 @@
 /* 
+flexbox bao gồm 2 phần chính: flex container và flex item
+
 display: flex|inline-flex               set layout có sử dụng flex-box không
 flex-direction: row|column              thay đổi hướng main axis
 flex-wrap: nowrap|wrap|wrap-reverse     set flex item có thể xuống dòng
@@ -35,12 +37,14 @@ html, body {
 }
 
 .nav {
-
+    display: flex;                          /*set flex container*/
+    justify-content: space-between;         /* đẩy item flex item ra sát 2 bên 
+                                            chỉ tạo khoảng trống ở giữa*/
 }
 
 .nav-list{
     padding-left: 0;
-    margin: auto 16px;
+    margin: 16px 16px;
 }
 
 .nav-item {
@@ -61,27 +65,86 @@ html, body {
 
 .login-row {
     margin: 10px;
+    display: flex;
+}
+
+.login-row label {
+    min-width: 90px;    /* tăng width cho label để đẩy input bằng nhau */
+}
+
+.login-row input {
+    flex: 1;        /* khi 1 flex item co flex >=1 thì flex item chiếm hết 
+                    không gian theo trục main axis */
 }
 
 /*======================== css form container ========================*/
 .container {
     background-color: #fff;
     padding: 10px;
+    display: flex;
 }
 
+.item-container {
+    padding: 0 16px;
+    /* flex: 1; */  
+    /* 
+    khi tất cả flex item có flex => 1 thì kích thước bằng nhau 
+    flex: 1; cú pháp shorthand có thể hiểu là flex-grow: 1;
+                                              flex-shrink: 1;
+                                              flex-basis: 1;
+    */
+}
+
+/* 3 đối tượng được set flex riêng thì chia phần chiếm không gian */
+.sidebar-one {
+    flex: 1;
+    order: 3;
+}
+
+.main-column {
+    flex: 3;        /* main-column chiếm gấp 3 lần 2 đối tượng còn lại */
+    order: 1;
+}
+
+.sidebar-two {
+    flex: 1;
+    order: 2;
+}
 /*========================= css form feature =========================*/
+.feature {
+    margin-top: 30px;
+    display: flex;
+    /* justify-content: space-evenly; */    /* khoảng trống đều nhau */
+    flex-direction: column;
+    justify-content: space-around;  /* space-around có khoảng trống 2 bên 
+                                    tạo khoảng trống từng flex item */
+}
+
+/* xét tình huống trên PC là chiều ngang trên mobie là chiều dọc*/
+@media (min-width:740px) {      /* độ dài tối thiểu của trình duyệt */
+    .feature {
+        flex-direction: row;
+    }
+}     
+    
 
 .feature-item {
-    margin: 20px 0;
-    padding: 10px;
+    /* margin: 30px 16px; */
+    /* flex: 1; */
+    padding: 15px;
+    flex-basis: 30%;        /* thay đổi kích thước flex item */
 }
+
 
 /*======================== css form box-layout ========================*/
 .box-layout {
-    max-width: 100%;
-    height: 600px;
+    margin-top: 30px;
     background-color: #fff;
-    padding-top: 15px;
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;        /* set xuống dòng khi thu nhỏ trình duyệt */
+    /* flex-wrap: wrap-reverse; */ /* set đảo chiều cross axis */
 }
 
 .box-item {
@@ -91,43 +154,104 @@ html, body {
     color: #fff;
     font-size: 50px;
     font-weight: bold;
+    line-height: 90px;
     text-align: center;
-    margin: 20px 0;
-    padding: 20px;
 }
 
 /*======================== css form center-item ========================*/
 .center-item {
-    font-size: 50px;
-    padding-top: 100px;
-    max-width: 100%;
+    max-width: 650px;
     height: 400px;
     background-color: rgb(116, 224, 181);
-    margin: 40px 50px;
+    margin: 40px auto 0 auto;
+    display: flex;  /* set flex container */
+}
+
+.content-center-item {
+    font-size: 50px;
+    font-weight: bold;
+    margin: auto;           /* khi set flex container thì set margin auto
+                            set vị trí flex item ở giữa */
 }
 
 /*======================= css form chart layout =======================*/
 .chart-layout {
-    max-width: 100%;
+    margin-top: 30px;
     height: 300px;
     background-color: #fff;
-    padding-top: 20px;
+    padding: 20px 0;
+    display: flex;                  /* set flex container */
+    align-items: flex-end;          /* set vị trí flex item ở cross end*/
+    justify-content: space-around;
 }
 
 .chart-item {
+    align-self: flex-end;   /* tương tự align-items mà set ở flex item */ 
     height: var(--percent);
     text-align: center;
-    width: 60px;
+    width: 45px;
     color: #fff;
     background-color: #EF5122;
+    /* 
+    hiệu ứng động animation: <name-animation> <style-animation> <time>
+        style-animation:    ease: chuyển động từ từ
+                            ease-in: chậm trước nhanh sau
+                            ease-in-out: đầu chậm - giữa nhanh - sau chậm
+                            ease-out: nhanh trước chậm sau
+                            linear: chuyển động đều
+                            
+    */
+    animation: growth ease-out 1s;     
+}
+
+/* create animation growth: tăng chiều cao cho chart*/
+@keyframes growth {
+    /* start animation */
+    from {
+        opacity: 0;                             /* set độ trong suốt */
+        height: calc(var(--percent) - 50%);     /* function tính toán */
+    }
+    /* end animation */
+    to {
+        opacity: 1;                             /* set độ trong suốt */
+        height: var(--percent);
+    }
 }
 
 /*======================= css form last content =======================*/
-.last-content {
-    background-color: #fff;
-    margin: 40px 5px;
+.the-end {
+    margin: 12px auto 48px auto;
+    padding: 30px 0;
+    max-width: 740px;
+    min-height: 360px;
+    display: flex;
+    
 }
 
-.last-content-item {
-    padding: 10px;
+.the-end-first {
+    padding: 4px 16px;
+    background-color: #fff;
+    flex: 1;
+}
+
+.the-end-seconds {
+    flex: 1;
+    display: flex;
+    flex-direction: column;     /* 
+                                đổi chiều main axis 
+                                từ row (defaul) sang column
+                                (*)column-reverse đổi phương main axis 
+                                */
+}
+
+.last-one {
+    background-color: rgb(236, 201, 221);
+    padding: 4px 16px;
+    flex: 1;
+}
+
+.last-two {
+    background-color: rgb(179, 240, 220);
+    padding: 4px 16px;
+    flex: 1;
 }

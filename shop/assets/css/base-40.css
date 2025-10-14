@@ -11,6 +11,7 @@
 html {
     font-size: 62.5%; /* 100% thường 1rem = 16px, 62.5% thì 1rem = 10px */
     line-height: 1.6rem;        /* set height dòng */
+    font-family: "Roboto", sans-serif;
     box-sizing: border-box;
 }
 
@@ -27,4 +28,15 @@ html {
 .grid__row {
     display: flex;
     flex-wrap: wrap;
+}
+
+/* animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }

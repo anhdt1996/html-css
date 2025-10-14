@@ -1,7 +1,7 @@
 html, body {
     margin: 0;
 }
-/* atribute top left right bottom chỉ sử dụng được khi có position */
+/* attribute top left right bottom chỉ sử dụng được khi có position */
 /* position relative phụ thuộc vị trí chính nó */
 h1 {
     /* position: relative; */

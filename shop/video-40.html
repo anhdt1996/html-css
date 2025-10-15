@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>F8 Shop</title>
     <!-- normalize css cdn: reset css-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     
@@ -53,11 +53,92 @@
                     </ul>
     
                     <ul class="header__navbar-list">
-                        <li class="header__navbar-item">
+                        <li class="header__navbar-item header__navbar-item--has-notify">
                             <a href="" class="header__navbar-icon-link">
                                 <i class="fa-regular fa-bell"></i>
                             </a>
                             <a href="" class="header__navbar-item-link">Thông báo</a>
+
+                            <!-- notification -->
+                            <div class="header__notify">
+                                <header class="header__notify-header">
+                                    <h3>
+                                        Thông báo mới nhận
+                                    </h3>
+                                </header>
+                                <ul class="header__notify-list">
+                                    <li class="header__notify-item header__notify-item--viewed">
+                                        <a href="" class="header__notify-link">
+                                            <img src="https://ohuihouse.com/wp-content/uploads/2023/03/34D018D7-41CB-42D5-9CF3-2D9BDF4F65CC-802x800.jpeg" alt="" class="header__notify-img">
+                                            <div class="header__notify-info">
+                                                <spam class="header__notify-name">
+                                                    Xác thực chính hãng nguồn góc các sản phẩm Ohui
+                                                </spam>
+                                                <spam class="header__notify-descriotion">
+                                                    Xác thực chính hãng nguồn góc các sản phẩm Ohui
+                                                </spam>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="header__notify-item header__notify-item--viewed">
+                                        <a href="" class="header__notify-link">
+                                            <img src="https://ohuihouse.com/wp-content/uploads/2023/03/34D018D7-41CB-42D5-9CF3-2D9BDF4F65CC-802x800.jpeg" alt="" class="header__notify-img">
+                                            <div class="header__notify-info">
+                                                <spam class="header__notify-name">
+                                                    Sale Sốc bộ dưỡng Ohui The First Tái tạo trẻ hóa da SALE OFF 70%
+                                                </spam>
+                                                <spam class="header__notify-descriotion">
+                                                    Siêu sale duy nhất 3 ngày 11-13/12/2025
+                                                </spam>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="header__notify-item header__notify-item--viewed">
+                                        <a href="" class="header__notify-link">
+                                            <img src="https://ohuihouse.com/wp-content/uploads/2023/03/34D018D7-41CB-42D5-9CF3-2D9BDF4F65CC-802x800.jpeg" alt="" class="header__notify-img">
+                                            <div class="header__notify-info">
+                                                <spam class="header__notify-name">
+                                                    DA NHẠY CẢM THÌ CÓ DÙNG ĐƯỢC SECRET KHÔNG?
+                                                </spam>
+                                                <spam class="header__notify-descriotion">
+                                                    "Da mình nhạy cảm thì có dùng được Secret không?"
+                                                </spam>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="header__notify-item header__notify-item--viewed">
+                                        <a href="" class="header__notify-link">
+                                            <img src="https://ohuihouse.com/wp-content/uploads/2023/03/34D018D7-41CB-42D5-9CF3-2D9BDF4F65CC-802x800.jpeg" alt="" class="header__notify-img">
+                                            <div class="header__notify-info">
+                                                <spam class="header__notify-name">
+                                                    BỘ SƯU TẬP PHIÊN BẢN GIỚI HẠN MÙA LỄ HỘI 2025
+                                                </spam>
+                                                <spam class="header__notify-descriotion">
+                                                    BỘ SƯU TẬP PHIÊN BẢN GIỚI HẠN MÙA LỄ HỘI 2025
+                                                </spam>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="header__notify-item header__notify-item--viewed">
+                                        <a href="" class="header__notify-link">
+                                            <img src="https://ohuihouse.com/wp-content/uploads/2023/03/34D018D7-41CB-42D5-9CF3-2D9BDF4F65CC-802x800.jpeg" alt="" class="header__notify-img">
+                                            <div class="header__notify-info">
+                                                <spam class="header__notify-name">
+                                                    Ohui chính thức ra mắt dòng son lì mới THE FIRST GENITURE LIPSTICK
+                                                </spam>
+                                                <spam class="header__notify-descriotion">
+                                                    THE FIRST GENITURE LIPSTICK - Tuyệt phẩm cho đôi môi
+                                                </spam>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <footer class="header__notify-footer">
+                                    <a href="" class="header__notify-footer-btn">
+                                        Xem tất cả
+                                    </a>
+                                </footer>
+                            </div>
                         </li>
                         <li class="header__navbar-item">
                             <a href="" class="header__navbar-item-link">
@@ -71,6 +152,65 @@
                         <li class="header__navbar-item header__navbar-item--bold">Đăng nhập</li>
                     </ul>
                 </nav>
+            </div>
+
+            <!-- modal layout -->
+            <div class="modal">
+                <div class="modal__overlay"></div>
+                
+                <div class="modal__body">
+                    <!-- Authen form -->
+                    <div class="auth-form">
+                        <div class="auth-form__container">
+                            <!-- header của auth -->
+                            <div class="auth-form__header">
+                                <h3 class="auth-form__heading">Đăng ký</h3>
+                                <span class="auth-form__switch-btn">Đăng nhập</span>
+                            </div>
+                            
+                            <!-- input của auth -->
+                            <div class="auth-form__form">
+                                <div class="auth-form__group">
+                                    <input type="text" class="auth-form__input" placeholder="Nhập email của bạn">
+                                </div>
+                                <div class="auth-form__group">
+                                    <input type="password" class="auth-form__input" placeholder="Nhập mật khẩu của bạn">
+                                </div>
+                                <div class="auth-form__group">
+                                    <input type="password" class="auth-form__input" placeholder="Nhập lại mật khẩu">
+                                </div>
+                            </div>
+
+                            <div class="auth-form__aside">
+                                <p class="auth-form__policy-text">
+                                    Bằng việc đăng kí, bạn đã đồng ý với F8-Shop về
+                                    <a href="" class="auth-form__text-link">
+                                        Điều khoản dịch vụ
+                                    </a> &
+                                    <a href="" class="auth-form__text-link">
+                                        Chính sách bảo mật
+                                    </a>
+                                </p>
+                            </div>
+
+                            <div class="auth-form__controls">
+                                <button class="btn">TRỞ LẠI</button>
+                                <button class="btn btn--primary">ĐĂNG KÝ</button>
+                            </div>
+                        </div>
+
+                        <div class="auth-form__socials">
+                            <a href="" class="btn btn--with-icon">
+                                <i class="fa-brands fa-square-facebook"></i>
+                                Kết nối với Facebook
+                            </a>
+                            <a href="" class="btn btn--with-icon">
+                                <i class="fa-brands fa-google"></i>
+                                Kết nối với Google
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </header>
 
